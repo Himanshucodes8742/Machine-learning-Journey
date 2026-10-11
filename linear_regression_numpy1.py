@@ -11,11 +11,7 @@ def predict(X, w,b):
 
 def mse(y_true, y_pred):
     return np.mean((y_true - y_pred)**2)
-
-predictions = predict(X,w,b)
-loss = mse(y,predictions)
-print(loss)
-
+    
 def gradient_computation(X,y,y_pred):
     n= len(X)
     error = y_pred - y
@@ -24,8 +20,6 @@ def gradient_computation(X,y,y_pred):
     db = (2/n) * np.sum(error)
 
     return dw, db
-
-
 
 learning_rate = 0.01
 
