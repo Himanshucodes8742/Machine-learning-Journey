@@ -33,7 +33,7 @@ learning_rate = 0.01
 
 times =1000
 
-for times in range(times):
+for time in range(times):
     predictions = predict(X, w,b)
 
     loss=mse(y,predictions)
@@ -43,9 +43,9 @@ for times in range(times):
     w -= learning_rate*dw
     b -= learning_rate*db
 
-    if(times%100==0):
+    if(time%100==0):
         print(
-            f"Times : {times} |"
+            f"Times : {time} |"
             f"Loss : {loss} |"
             f"w = {w:.4f} |"
             f"b = {b:.4f} "
